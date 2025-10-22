@@ -30,6 +30,14 @@ public class Car {
         }
     }
 
+    public void printProgress() {
+        System.out.print(name + " : ");
+        for(int i = 0; i < moveCount; i++) {
+            System.out.print("-");
+        }
+        System.out.println();
+    }
+
     private boolean canMove() {
         int randomValue = Randoms.pickNumberInRange(0, 9);
         return randomValue >= MOVE_THRESHOLD;
