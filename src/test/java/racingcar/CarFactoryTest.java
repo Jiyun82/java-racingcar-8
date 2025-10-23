@@ -13,7 +13,7 @@ public class CarFactoryTest {
     @DisplayName("입력된 문자열을 쉼표로 구분하여 자동차 객체들을 생성한다")
     void shouldCreateCarsWhenInputIsCommaSeparated() {
         // given
-        String input = "pobi,woni,hello";
+        String input = "pobi,woni, hello";
         CarFactory carFactory = new CarFactory();
 
         // when
