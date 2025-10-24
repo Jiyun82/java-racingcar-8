@@ -11,5 +11,13 @@ public class Application {
         CarFactory carFactory = new CarFactory();
         List<Car> cars = carFactory.createCars(input);
 
+        System.out.println("시도할 횟수는 몇 회인가요?");
+        int roundCount;
+        try {
+            roundCount = Integer.parseInt(Console.readLine());
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("양의 정수를 입력해주세요.");
+        }
     }
+
 }
