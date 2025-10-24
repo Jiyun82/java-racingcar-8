@@ -15,27 +15,27 @@ public class Racing {
     }
 
     public void play() {
-        for(int i = 0; i < roundCount; i++) {
+        for (int i = 0; i < roundCount; i++) {
             playRound();
             printRoundProgress();
         }
     }
 
     private void playRound() {
-        for(Car car : cars) {
+        for (Car car : cars) {
             car.moveIfPossible();
         }
     }
 
     private void printRoundProgress() {
-        for(Car car : cars) {
+        for (Car car : cars) {
             car.printProgress();
         }
         System.out.println();
     }
 
     private void validateRoundCount(int roundCount) {
-        if(roundCount < 1) {
+        if (roundCount < 1) {
             throw new IllegalArgumentException("양의 정수를 입력해주세요.");
         }
     }
