@@ -24,15 +24,19 @@ public class Car {
         return moveCount;
     }
 
-    public void move() {
-        if(canMove()) {
-            moveCount++;
+    public void moveIfPossible() {
+        if (canMove()) {
+            move();
         }
+    }
+
+    private void move() {
+        moveCount++;
     }
 
     public void printProgress() {
         System.out.print(name + " : ");
-        for(int i = 0; i < moveCount; i++) {
+        for (int i = 0; i < moveCount; i++) {
             System.out.print("-");
         }
         System.out.println();
@@ -44,7 +48,7 @@ public class Car {
     }
 
     private void validateName(String name) {
-        if(name.length() > 5 || name.length() < 1) {
+        if (name.length() > 5 || name.length() < 1) {
             throw new IllegalArgumentException("자동차 이름은 1자 이상 5자 이하만 가능합니다.");
         }
     }
