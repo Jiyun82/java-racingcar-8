@@ -9,7 +9,7 @@ public class CarFactory {
 
         String[] names = input.split(",");
         List<Car> cars = new ArrayList<>();
-        for(String name : names) {
+        for (String name : names) {
             cars.add(new Car(name.trim()));
         }
         return cars;
