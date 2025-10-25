@@ -46,4 +46,14 @@ public class CarFactoryTest {
                 .isInstanceOf(IllegalArgumentException.class);
     }
 
+    @Test
+    @DisplayName("이름이 중복 된다면 예외를 던진다.")
+    void shouldThrowExceptionWhenNameIsDuplicated() {
+        String input = "pobi,pobi,jun";
+        CarFactory carFactory = new CarFactory();
+
+        assertThatThrownBy(() -> carFactory.createCars(input))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
+
 }
