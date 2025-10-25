@@ -18,6 +18,12 @@ public class Application {
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException("양의 정수를 입력해주세요.");
         }
+
+        Racing racing = new Racing(cars, roundCount);
+        racing.play();
+
+        ResultCalculator resultCalculator = new ResultCalculator();
+        List<Car> winners = resultCalculator.getWinners(cars);
     }
 
 }
