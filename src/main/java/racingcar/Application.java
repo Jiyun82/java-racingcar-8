@@ -15,6 +15,9 @@ public class Application {
 
         ResultCalculator resultCalculator = new ResultCalculator();
         List<Car> winners = resultCalculator.getWinners(cars);
+
+        OutputView outputView = new OutputView();
+        outputView.printWinners(winners);
     }
 
 }
